@@ -1,7 +1,4 @@
 const mineflayer = require("mineflayer")
-const express = require("express")
-
-const app = express()
 
 function criarBot() {
     const bot = mineflayer.createBot({
@@ -28,10 +25,3 @@ function criarBot() {
 
 criarBot()
 
-app.get("/", (req, res) => {
-    res.send("PudimBot online")
-})
-
-app.listen(3000, () => {
-    console.log("Web server iniciado")
-})
